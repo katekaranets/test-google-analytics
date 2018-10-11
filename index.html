@@ -17,6 +17,8 @@
                 cookieDomain: 'auto',
                 siteSpeedSampleRate: 2
             });
+
+            ga('create', 'UA-127175436-3', 'auto', 'Navigator');
     
             ga('send', 'pageview');
     
@@ -25,12 +27,12 @@
     <body>
 
         <div>
-            <button id="first">First</button><button id="second">Second</button>
+            <button id="first">Balance</button><button id="second">My awards</button>
         </div>
 
         <div>
             <p>Just a plain text</p>
-            <button id="third">Third</button>
+            <button id="third">Dashboard</button>
         </div>
 
         <script>
@@ -39,15 +41,15 @@
                 var third = document.getElementById('third');
     
                 first.addEventListener('click', function(){
-                  ga('send', 'event', 'global-nav', 'button', 'first')
+                  ga('Navigator.send', 'event', 'global-nav', 'button', 'first')
                 } )
     
                 second.addEventListener('click', function(){
-                  ga('send', 'event', 'global-nav', 'button', 'second')
+                  ga('Navigator.send', 'event', 'global-nav', 'button', 'second')
                 } )
     
                 third.addEventListener('click', function(){
-                  ga('send', 'event', 'another site', 'button', 'third')
+                  ga('Navigator.send', 'event', 'another site', 'button', 'third')
                 } )
         </script>
 
